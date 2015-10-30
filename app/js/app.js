@@ -4,12 +4,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   $stateProvider
     .state('home', {
       url: '/home',
-      templateUrl: 'home.html',
+      templateUrl: '/home.html',
       controller: 'MainCtrl'
     })
     .state('posts', {
       url: '/posts/{id}',
-      templateUrl: 'posts.html',
+      templateUrl: '/posts.html',
       controller: 'PostsCtrl'
     });
 
@@ -21,7 +21,7 @@ app.factory('posts', [function() {
     posts: []
   };
   return o;
-}])
+}]);
 
 app.controller('MainCtrl', ['$scope', 'posts', function($scope, posts) {
   $scope.posts = posts.posts;
@@ -44,7 +44,7 @@ app.controller('MainCtrl', ['$scope', 'posts', function($scope, posts) {
   $scope.incrementUpvotes = function(post) {
     post.upvotes += 1;
   };
-}])
+}]);
 
 app.controller('PostsCtrl', ['$scope', '$stateParams', '$posts', function($scope, $stateParams, posts) {
   $scope.post = posts.posts[$stateParams.id];
@@ -59,4 +59,3 @@ app.controller('PostsCtrl', ['$scope', '$stateParams', '$posts', function($scope
     $scope.body = '';
   };
 }]);
-
