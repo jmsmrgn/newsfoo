@@ -1,8 +1,0 @@
-{
-  "asi": true,
-  "curly": true,
-  "eqeqeq": true,
-  "globals": {
-    "jQuery": true
-  }
-}
