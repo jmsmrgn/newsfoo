@@ -1,5 +1,5 @@
 ## newsfoo
 
-MEAN stack news board adapted from [thinkster.io](https://thinkster.io/mean-stack-tutorial)
+MEAN stack news board tutorial from [thinkster.io](https://thinkster.io/mean-stack-tutorial)
 
-Run `npm install` then `gulp`
+Run `npm install` then `npm start`
